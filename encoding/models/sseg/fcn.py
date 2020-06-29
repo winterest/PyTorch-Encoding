@@ -134,7 +134,7 @@ def get_fcn(dataset='pascal_voc', backbone='resnet50s', pretrained=False,
     if pretrained:
         from ..model_store import get_model_file
         model.load_state_dict(torch.load(
-            get_model_file('fcn_%s_%s'%(backbone, acronyms[dataset]), root=root)))
+            get_model_file('fcn_%s_%s'%(backbone, acronyms[dataset]), root=root), map_location=lambda storage, loc: storage))
     return model
 
 def get_fcn_resnet50_pcontext(pretrained=False, root='~/.encoding/models', **kwargs):
