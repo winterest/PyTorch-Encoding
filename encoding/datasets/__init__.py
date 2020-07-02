@@ -35,6 +35,7 @@ acronyms = {
     'citys': 'citys',
     'minc': 'minc',
     'cifar10': 'cifar10',
+    'roof': 'roof',
 }
 
 def get_dataset(name, **kwargs):
