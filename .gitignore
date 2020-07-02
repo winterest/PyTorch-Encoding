@@ -11,3 +11,4 @@ encoding/_ext/
 *.o
 *.so
 *.ninja*
+dist/

@@ -108,6 +108,7 @@ class Options():
                 'pcontext': 80,
                 'ade20k': 180,
                 'citys': 240,
+                'roof': 50,
             }
             args.epochs = epoches[args.dataset.lower()]
         if args.lr is None:
@@ -118,6 +119,7 @@ class Options():
                 'pcontext': 0.001,
                 'ade20k': 0.004,
                 'citys': 0.004,
+                'roof': 0.004,
             }
             args.lr = lrs[args.dataset.lower()] / 16 * args.batch_size
         print(args)

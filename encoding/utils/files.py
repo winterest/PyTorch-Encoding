@@ -56,7 +56,7 @@ def download(url, path=None, overwrite=False, sha1_hash=None):
             os.makedirs(dirname)
 
         print('Downloading %s from %s...'%(fname, url))
-        r = requests.get(url, stream=True)
+        r = requests.get(url, stream=True, verify=False)
         if r.status_code != 200:
             raise RuntimeError("Failed downloading url %s"%url)
         total_length = r.headers.get('content-length')
