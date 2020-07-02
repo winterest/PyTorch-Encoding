@@ -12,3 +12,4 @@ encoding/_ext/
 *.so
 *.ninja*
 dist/
+.vscode/settings.json
