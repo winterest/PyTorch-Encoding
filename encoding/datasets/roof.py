@@ -128,7 +128,7 @@ class RoofSegmentation(BaseDataset):
     #    return img, self._mask_transform(mask)
 
     def _mask_transform(self, mask):
-        target = np.array(mask).astype('int64') - 1
+        target = np.array(mask).astype('int64') #- 1
         return torch.from_numpy(target)
 
     def __len__(self):

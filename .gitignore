@@ -13,3 +13,5 @@ encoding/_ext/
 *.ninja*
 dist/
 .vscode/settings.json
+*tar
+log

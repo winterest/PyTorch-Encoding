@@ -5,12 +5,35 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: ./experiments/segmentation/train.py",
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "encnet: ./experiments/segmentation/train.py",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args" : ["--dataset",  "roof",  "--model", "encnet", "--aux", "--se-loss", "--batch-size", "4"]
+            "args" : ["--dataset",  "roof",  "--model", "encnet", "--aux", "--se-loss", "--batch-size", "8"]
+        },        
+        {
+            "name": "val_encnet: ./experiments/segmentation/train.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args" : ["--dataset",  "roof",  "--model", "encnet", "--aux", "--se-loss", "--batch-size", "4", "--eval"]
+        },
+        {
+            "name": "deeplab: ./experiments/segmentation/train.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args" : ["--dataset",  "roof",  "--model", "deeplab", "--aux", "--se-loss", "--batch-size", "4"]
         }
     ]
 }
